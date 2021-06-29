@@ -27,8 +27,8 @@ jobs:
          with:
            token: ${{ secrets.TOKEN }}
            base-branches: |
-            'another-branch-uat
-             another-two-branch-uat'
+             another-branch-uat
+             another-two-branch-uat
            title-suffix: 'Release UAT'
            branch-suffix: '-UAT'
            release-prefix: 'release'

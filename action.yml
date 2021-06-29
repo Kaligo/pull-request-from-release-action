@@ -1,0 +1,21 @@
+name: 'Raise pull request from release to a branch'
+description: 'Action for raising a pull request against a base branch when a release is created'
+runs:
+  using: 'node12'
+  main: 'index.js'
+inputs:
+  token:
+    description: 'Oauth token'
+    required: true
+  base-branches:
+    description: 'Branches to raise pull request against'
+    required: true
+  title-suffix:
+    description: 'The suffix of the pull request title that is appeneded to the pull request title'
+    required: true
+  branch-suffix:
+    description: 'The suffix of the branch name that is automatically created when the release is created.'
+    required: true
+  release-prefix:
+    description: 'The prefix of the release name that is used to match a release with a release name since release can have many tags. This is for the use case of a multi-tenant repository'
+    required: true
